@@ -23,13 +23,18 @@
     "noUncheckedSideEffectImports": true,
 
     /* Mapping */
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@router/*": ["src/router/*"],
-      "@styles/*": ["src/styles/*"],
+      "@components/*": ["./components/*"],
+      "@layouts/*": ["./layouts/*"],
+      "@pages/*": ["./pages/*"],
+      "@router/*": ["./router/*"],
+      "@styles/*": ["./styles/*"],
+      "@tests/*": ["./__tests__/*"],
     }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "node_modules/vitest/globals.d.ts"
+  ]
 }
