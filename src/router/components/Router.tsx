@@ -1,9 +1,16 @@
 import { Routes, Route } from 'react-router'
-import App from '../../App.tsx'
+import Main from '../../layouts/Main.tsx'
+import Landing from '../../pages/Landing.tsx'
 
 const Router = () => (
 	<Routes>
-		<Route path="/" element={<App />} />
+		<Route element={<Main isLanding /> }>
+			<Route path='/' element={<Landing />} />
+		</Route>
+
+		<Route element={<Main /> }>
+			<Route path='/home' element={<Landing />} />
+		</Route>
 	</Routes>
 )
 
