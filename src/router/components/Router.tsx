@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router'
-import Main from '../../layouts/Main.tsx'
-import Landing from '../../pages/Landing.tsx'
+import Main from '@layouts/Main.tsx'
+import Landing from '@pages/Landing.tsx'
 
 const Router = () => (
 	<Routes>
