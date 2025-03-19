@@ -1,3 +1,44 @@
+import CallToAction from '@components/CallToAction.tsx'
+
+const resourceLinks = [
+	{
+		title: 'FAQ',
+		link: '/faq',
+	},
+	{
+		title: 'Blog',
+		link: '/blog',
+	},
+	{
+		title: 'Help Center',
+		link: '/help',
+	},
+]
+const companyLinks = [
+	{
+		title: 'About Us',
+		link: '/about',
+	},
+	{
+		title: 'Contact',
+		link: '/contact',
+	},
+	{
+		title: 'Careers',
+		link: '/careers',
+	},
+]
+const legalLinks = [
+	{
+		title: 'Privacy Policy',
+		link: '/privacy',
+	},
+	{
+		title: 'Terms of Service',
+		link: '/terms',
+	},
+]
+
 const Footer = () => {
 	return (
 		<footer className="bg-background border-t border-divider py-8">
@@ -17,30 +58,16 @@ const Footer = () => {
 								Resources
 							</h3>
 							<ul className="space-y-1">
-								<li>
-									<a
-										href="/faq"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										FAQ
-									</a>
-								</li>
-								<li>
-									<a
-										href="/blog"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Blog
-									</a>
-								</li>
-								<li>
-									<a
-										href="/help"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Help Center
-									</a>
-								</li>
+								{resourceLinks.map((link, index) => (
+									<li key={index}>
+										<CallToAction
+											path={link.link}
+											type='link'
+										>
+											{link.title}
+										</CallToAction>
+									</li>
+								))}
 							</ul>
 						</div>
 						<div>
@@ -48,30 +75,16 @@ const Footer = () => {
 								Company
 							</h3>
 							<ul className="space-y-1">
-								<li>
-									<a
-										href="/about"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										About Us
-									</a>
-								</li>
-								<li>
-									<a
-										href="/contact"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Contact
-									</a>
-								</li>
-								<li>
-									<a
-										href="/careers"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Careers
-									</a>
-								</li>
+								{companyLinks.map((link, index) => (
+									<li key={index}>
+										<CallToAction
+											path={link.link}
+											type='link'
+										>
+											{link.title}
+										</CallToAction>
+									</li>
+								))}
 							</ul>
 						</div>
 						<div>
@@ -79,22 +92,16 @@ const Footer = () => {
 								Legal
 							</h3>
 							<ul className="space-y-1">
-								<li>
-									<a
-										href="/privacy"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Privacy Policy
-									</a>
-								</li>
-								<li>
-									<a
-										href="/terms"
-										className="inline-flex items-center typography-md-regular text-primary hover:underline"
-									>
-										Terms of Service
-									</a>
-								</li>
+								{legalLinks.map((link, index) => (
+									<li key={index}>
+										<CallToAction
+											path={link.link}
+											type='link'
+										>
+											{link.title}
+										</CallToAction>
+									</li>
+								))}
 							</ul>
 						</div>
 					</div>
