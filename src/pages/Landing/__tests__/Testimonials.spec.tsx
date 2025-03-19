@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 
 describe('Landing Page - Testimonials', () => {
 	it('should render the Testimonials', () => {
-		const { container } = render(<Testimonials />)
+		const { container } = render(<Testimonials stats={[]} testimonials={[]} />)
 		expect(container).toBeDefined()
 	})
 })
