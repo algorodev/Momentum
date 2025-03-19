@@ -1,3 +1,4 @@
+import CallToAction from '@components/CallToAction.tsx'
 import ArrowDown from '@components/Icons/ArrowDown.tsx'
 import Overlay from '@components/Overlay.tsx'
 
@@ -21,15 +22,12 @@ const HeroSection = () => (
 					Track your habits, build <span className='text-secondary-light'>momentum</span>, and celebrate progress.
 				</p>
 				<div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-					<a
-						href="/signup"
-						className="inline-block bg-secondary hover:bg-secondary-dark text-white text-center typography-lg-semibold py-3 px-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fadeIn delay-200"
-					>
+					<CallToAction type='secondary' path='/signup'>
 						Get Started
-					</a>
+					</CallToAction>
 					<a
 						href="#features"
-						className="inline-block border border-secondary text-white text-center typography-lg-semibold py-3 px-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fadeIn delay-200"
+						className="inline-block border border-secondary text-white text-center typography-lg-semibold py-3 px-6 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fadeIn"
 					>
 						Learn More
 					</a>

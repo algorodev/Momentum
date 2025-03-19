@@ -1,3 +1,5 @@
+import CallToAction from '@components/CallToAction.tsx'
+
 const Price = () => (
 	<section id="pricing" className="py-16 mb-4">
 		<div className="container mx-auto px-4">
@@ -22,12 +24,9 @@ const Price = () => (
 						<li className='typography-md-regular text-text-secondary'>Full access to all features</li>
 						<li className='typography-md-regular text-text-secondary'>Ongoing updates & support</li>
 					</ul>
-					<a
-						href="/signup"
-						className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded shadow transition duration-300 ease-in-out transform hover:scale-105"
-					>
+					<CallToAction type='primary' path='/signup'>
 						Get Started
-					</a>
+					</CallToAction>
 				</div>
 			</div>
 		</div>

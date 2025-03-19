@@ -1,3 +1,4 @@
+import CallToAction from '@components/CallToAction.tsx'
 import ChevronDown from '@components/Icons/ChevronDown.tsx'
 import { ReactNode } from 'react'
 
@@ -46,13 +47,13 @@ const FeaturesOverview = ({ features }: FeaturesOverviewProps) => (
 						)}
 						{feature.link && (
 							<div className="mt-4">
-								<a
-									href={feature.link}
-									className="inline-flex items-center typography-md-regular text-primary hover:underline"
+								<CallToAction
+									type='link'
+									path={feature.link}
 								>
 									Learn More
 									<span className='w-4 h-4 rotate-270'><ChevronDown /></span>
-								</a>
+								</CallToAction>
 							</div>
 						)}
 					</div>
