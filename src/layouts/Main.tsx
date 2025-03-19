@@ -7,12 +7,12 @@ type LayoutProps = {
 }
 
 const Main = ({ isLanding }: LayoutProps) => (
-	<section className='flex flex-col min-h-screen bg-background'>
+	<section className='flex flex-col min-h-screen bg-background scroll-smooth'>
 		{ !isLanding && <Header /> }
-		<main className='container mx-auto flex-grow p-4'>
+		<main className='container mx-auto flex-grow'>
 			<Outlet />
 		</main>
-		{ !isLanding && <Footer /> }
+		{ isLanding && <Footer /> }
 	</section>
 )
 
