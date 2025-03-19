@@ -1,0 +1,150 @@
+@theme static {
+  --font-primary: 'Montserrat', sans-serif;
+}
+
+@utility typography-jumbo-regular {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-jumbo-semibold {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-jumbo-bold {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-2xl-regular {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-2xl-semibold {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-2xl-bold {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-xl-regular {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-xl-semibold {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-xl-bold {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-lg-regular {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-lg-semibold {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-lg-bold {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-md-regular {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-md-semibold {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-md-bold {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-sm-regular {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-sm-semibold {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-sm-bold {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@utility typography-xs-regular {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@utility typography-xs-semibold {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@utility typography-xs-bold {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 125%;
+}
