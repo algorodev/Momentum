@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 type CallToActionProps = {
 	type: 'primary' | 'secondary' | 'tertiary' | 'link'

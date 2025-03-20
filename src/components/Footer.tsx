@@ -1,45 +1,45 @@
 import CallToAction from '@components/CallToAction.tsx'
 
-const resourceLinks = [
-	{
-		title: 'FAQ',
-		link: '/faq',
-	},
-	{
-		title: 'Blog',
-		link: '/blog',
-	},
-	{
-		title: 'Help Center',
-		link: '/help',
-	},
-]
-const companyLinks = [
-	{
-		title: 'About Us',
-		link: '/about',
-	},
-	{
-		title: 'Contact',
-		link: '/contact',
-	},
-	{
-		title: 'Careers',
-		link: '/careers',
-	},
-]
-const legalLinks = [
-	{
-		title: 'Privacy Policy',
-		link: '/privacy',
-	},
-	{
-		title: 'Terms of Service',
-		link: '/terms',
-	},
-]
-
 const Footer = () => {
+	const resourceLinks = [
+		{
+			title: 'FAQ',
+			link: '/faq',
+		},
+		{
+			title: 'Blog',
+			link: '/blog',
+		},
+		{
+			title: 'Help Center',
+			link: '/help',
+		},
+	]
+	const companyLinks = [
+		{
+			title: 'About Us',
+			link: '/about',
+		},
+		{
+			title: 'Contact',
+			link: '/contact',
+		},
+		{
+			title: 'Careers',
+			link: '/careers',
+		},
+	]
+	const legalLinks = [
+		{
+			title: 'Privacy Policy',
+			link: '/privacy',
+		},
+		{
+			title: 'Terms of Service',
+			link: '/terms',
+		},
+	]
+
 	return (
 		<footer className="bg-background border-t border-divider py-8">
 			<div className="container mx-auto px-4">

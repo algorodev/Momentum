@@ -9,8 +9,8 @@ type ButtonProps = {
 
 const Button = ({children, type, variant}: ButtonProps) => {
 	const classes = {
-		primary: 'bg-primary hover:bg-primary-dark text-white py-2 rounded transition-colors',
-		secondary: 'bg-secondary hover:bg-secondary-dark text-white py-2 rounded transition-colors'
+		primary: 'bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded transition-colors',
+		secondary: 'bg-secondary hover:bg-secondary-dark text-white py-3 px-6 rounded transition-colors'
 	}
 
 	return (

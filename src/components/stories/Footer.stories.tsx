@@ -1,10 +1,12 @@
+import CallToAction from '@components/CallToAction.tsx'
 import { Meta, StoryObj } from '@storybook/react'
 import Footer from '@components/Footer.tsx'
 
 const meta = {
 	title: 'Components/Footer',
 	component: Footer,
-	tags: ['autodocs'],
+	subcomponents: { CallToAction },
+	tags: ['autodocs']
 } satisfies Meta<typeof Footer>
 
 type Story = StoryObj<typeof meta>

@@ -1,6 +1,6 @@
 import Login from '@pages/Login/Login.tsx'
 import SignUp from '@pages/SignUp/SignUp.tsx'
-import { Routes, Route } from 'react-router'
+import { Routes, Route } from 'react-router-dom'
 import Main from '@layouts/Main.tsx'
 import Landing from '@pages/Landing/Landing.tsx'
 
