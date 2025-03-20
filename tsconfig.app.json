@@ -26,9 +26,11 @@
     "baseUrl": "src",
     "paths": {
       "@components/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"],
       "@layouts/*": ["./layouts/*"],
       "@pages/*": ["./pages/*"],
       "@router/*": ["./router/*"],
+      "@store/*": ["./store/*"],
       "@styles/*": ["./styles/*"],
       "@tests/*": ["./__tests__/*"],
     }
