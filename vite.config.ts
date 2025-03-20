@@ -17,7 +17,7 @@ export default defineConfig({
       reporter: ['text', 'html'],
       reportsDirectory: './__tests__/coverage',
       include: ['**/*.tsx', '**/*.ts'],
-      exclude: ['**/*.d.ts', '**/*.spec.tsx', '**/*.stories.ts'],
+      exclude: ['**/*.d.ts', '**/*.spec.tsx', '**/*.stories.ts', '**/*.stories.tsx'],
     }
   }
 })

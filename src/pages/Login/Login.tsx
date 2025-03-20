@@ -22,9 +22,9 @@ const LoginPage = () => {
 	return (
 		<div className='min-h-screen flex items-center justify-center'>
 			<div className='w-full max-w-md p-6 bg-white rounded shadow'>
-				<h2 className='typography-2xl-bold mb-6 text-center text-text-primary'>
+				<h1 className='typography-2xl-bold mb-6 text-center text-text-primary'>
 					Log In
-				</h2>
+				</h1>
 				{error && (
 					<div className='mb-4 text-red-600 typography-md-semibold text-center'>
 						{error}
