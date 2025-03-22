@@ -1,20 +1,22 @@
+import HabitsLayout from '@layouts/HabitsLayout.tsx'
+import Habits from '@pages/Habits/Habits.tsx'
 import Login from '@pages/Login/Login.tsx'
 import SignUp from '@pages/SignUp/SignUp.tsx'
 import ProtectedRoute from '@router/components/ProtectedRoute.tsx'
 import { Routes, Route } from 'react-router-dom'
-import Main from '@layouts/Main.tsx'
+import LandingLayout from '@layouts/LandingLayout.tsx'
 import Landing from '@pages/Landing/Landing.tsx'
 
 const Router = () => (
 	<Routes>
-		<Route element={<Main isLanding /> }>
-			<Route path='/' element={<Landing />} />
+		<Route element={<LandingLayout /> }>
+			<Route index element={<Landing />} />
 			<Route path='/signup' element={<SignUp />} />
 			<Route path='/login' element={<Login />} />
 		</Route>
 
-		<Route element={<ProtectedRoute children={<Main />}/> }>
-			<Route path='/home' element={<Landing />} />
+		<Route path='/habits' element={<ProtectedRoute children={<HabitsLayout />}/> }>
+			<Route index element={<Habits />} />
 		</Route>
 	</Routes>
 )

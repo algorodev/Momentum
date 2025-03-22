@@ -22,7 +22,7 @@ const LoginPage = () => {
 
 		dispatch(login({ email, password }))
 		console.log('Logging in:', { email, password })
-		navigate('/home')
+		navigate('/habits')
 		setError('')
 	}
 

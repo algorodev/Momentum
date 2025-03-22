@@ -30,7 +30,9 @@ const FeaturesOverview = ({ features }: FeaturesOverviewProps) => (
 						className="bg-white rounded-lg shadow p-6 text-center transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
 					>
 						<div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-primary-light rounded-full text-white text-3xl">
-							{feature.icon}
+							<span className='w-6 h-6'>
+								{feature.icon}
+							</span>
 						</div>
 						<h3 className="typography-lg-semibold mb-2 text-text-primary">
 							{feature.title}

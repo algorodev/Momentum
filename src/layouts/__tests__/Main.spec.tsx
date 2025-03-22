@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import Main from '@layouts/Main'
+import LandingLayout from '@layouts/LandingLayout.tsx'
 
 vi.mock('@components/Header.tsx', () => ({
 	__esModule: true,
@@ -11,7 +11,7 @@ vi.mock('@components/Footer.tsx', () => ({
 	default: () => <div data-testid="footer">Footer</div>,
 }))
 
-describe('Main Layout', () => {
+describe('LandingLayout Layout', () => {
 	afterEach(() => {
 		vi.clearAllMocks()
 		vi.resetAllMocks()
@@ -21,7 +21,7 @@ describe('Main Layout', () => {
 	it('renders the layout with Header (non-landing) correctly', () => {
 		render(
 			<MemoryRouter>
-				<Main />
+				<LandingLayout />
 			</MemoryRouter>
 		)
 		expect(screen.getByTestId('header')).toBeInTheDocument()
@@ -32,7 +32,7 @@ describe('Main Layout', () => {
 	it('renders the layout with Footer (landing) correctly', () => {
 		render(
 			<MemoryRouter>
-				<Main isLanding />
+				<LandingLayout isLanding />
 			</MemoryRouter>
 		)
 		expect(screen.getByTestId('footer')).toBeInTheDocument()
@@ -43,7 +43,7 @@ describe('Main Layout', () => {
 	it('renders the overall layout structure with expected classes', () => {
 		const { container } = render(
 			<MemoryRouter>
-				<Main />
+				<LandingLayout />
 			</MemoryRouter>
 		)
 		const section = container.querySelector('section')

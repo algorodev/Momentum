@@ -16,7 +16,7 @@ const FormControl = ({name, label, onValueChange, placeholder, type, value}: For
 			<input
 				id={name}
 				type={type}
-				className='typography-md-regular w-full px-3 py-2 border-2 border-border hover:border-primary focus:border-primary rounded outline-0'
+				className='typography-md-regular w-full p-3 border-2 border-border hover:border-primary focus:border-primary rounded outline-0'
 				value={value}
 				onChange={(e) => onValueChange(e.target.value)}
 				placeholder={placeholder}

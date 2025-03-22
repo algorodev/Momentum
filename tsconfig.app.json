@@ -33,6 +33,7 @@
       "@store/*": ["./store/*"],
       "@styles/*": ["./styles/*"],
       "@tests/*": ["./__tests__/*"],
+      "@utils/*": ["./utils/*"]
     }
   },
   "include": [
