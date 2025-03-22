@@ -1,9 +1,10 @@
 import CallToAction from '@components/CallToAction.tsx'
 import { render, screen } from '@testing-library/react'
+import { LinkProps } from 'react-router-dom'
 
 vi.mock('react-router-dom', () => ({
-	Link: ({to, children, className}) => (
-		<a href={to} className={className}>
+	Link: ({to, children, className}: LinkProps) => (
+		<a href={to.toString()} className={className}>
 			{children}
 		</a>
 	)

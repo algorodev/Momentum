@@ -4,7 +4,11 @@ import { loadState, saveState } from './persist.ts'
 
 const preloadedState = loadState()
 
-const store = configureStore({
+type Reducers = {
+	auth: ReturnType<typeof authReducer>
+}
+
+const store = configureStore<Reducers>({
 	reducer: {
 		auth: authReducer,
 	},

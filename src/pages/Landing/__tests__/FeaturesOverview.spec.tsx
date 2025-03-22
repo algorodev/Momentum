@@ -5,8 +5,14 @@ import Trophy from '@components/Icons/Trophy.tsx'
 import { render, screen } from '@testing-library/react'
 import FeaturesOverview from '@pages/Landing/components/FeaturesOverview'
 
+type CallToActionProps = {
+	path: string
+	type: 'primary' | 'secondary' | 'tertiary' | 'link'
+	children: string
+}
+
 vi.mock('@components/CallToAction', () => ({
-	default: ({path, type, children}) => (
+	default: ({path, children}: CallToActionProps) => (
 		<a href={path} className='text-text-secondary hover:text-text-primary transition-colors'>
 			{children}
 		</a>

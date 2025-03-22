@@ -1,8 +1,14 @@
 import { render, screen } from '@testing-library/react'
 import Footer from '../Footer'
 
+type CallToActionProps = {
+	path: string
+	type: 'primary' | 'secondary' | 'tertiary' | 'link'
+	children: string
+}
+
 vi.mock('@components/CallToAction', () => ({
-	default: ({path, type, children}) => (
+	default: ({path, children}: CallToActionProps) => (
 		<a href={path} className='text-text-secondary hover:text-text-primary transition-colors'>
 			{children}
 		</a>

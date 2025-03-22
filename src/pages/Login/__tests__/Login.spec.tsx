@@ -3,8 +3,14 @@ import userEvent from '@testing-library/user-event'
 import Login from '@pages/Login/Login.tsx'
 import { MemoryRouter } from 'react-router-dom'
 
+type CallToActionProps = {
+	path: string
+	type: 'primary' | 'secondary' | 'tertiary' | 'link'
+	children: string
+}
+
 vi.mock('@components/CallToAction', () => ({
-	default: ({path, type, children}) => (
+	default: ({path, children}: CallToActionProps) => (
 		<a href={path} className='text-text-secondary hover:text-text-primary transition-colors'>
 			{children}
 		</a>

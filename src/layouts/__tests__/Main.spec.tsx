@@ -32,7 +32,7 @@ describe('LandingLayout Layout', () => {
 	it('renders the layout with Footer (landing) correctly', () => {
 		render(
 			<MemoryRouter>
-				<LandingLayout isLanding />
+				<LandingLayout />
 			</MemoryRouter>
 		)
 		expect(screen.getByTestId('footer')).toBeInTheDocument()
