@@ -11,12 +11,12 @@ const Navigator = () => {
 						</CallToAction>
 					</li>
 					<li>
-						<CallToAction path='#' type='link' isActive>
+						<CallToAction path='/habits' type='link' isActive>
 							Habits
 						</CallToAction>
 					</li>
 					<li>
-						<CallToAction path='#' type='link'>
+						<CallToAction path='/habits/dashboard' type='link'>
 							Dashboard
 						</CallToAction>
 					</li>

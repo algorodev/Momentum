@@ -122,14 +122,14 @@ const HabitTracker = () => {
 	return (
 		<div className='bg-white rounded-lg border border-border shadow-sm overflow-hidden' ref={containerRef}>
 			<div className='flex flex-row items-center justify-between p-4 border-b border-border'>
-				<h2 className='text-lg font-semibold'>Habit Tracker</h2>
+				<h2 className='typography-lg-bold'>Habit Tracker</h2>
 				<div className='flex items-center gap-2'>
 					<Button type='button' variant='icon' onClick={previousMonth}>
             <span className='rotate-90 h-4 w-4'>
               <ChevronDown/>
             </span>
 					</Button>
-					<span className='font-medium'>
+					<span className='typography-lg-semibold'>
             {monthName} {currentYear}
           </span>
 					<Button type='button' variant='icon' onClick={nextMonth}>

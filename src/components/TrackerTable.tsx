@@ -94,14 +94,14 @@ const TrackerTable = ({ containerRef, habits, removeHabit, toggleHabitCompletion
 		<table className='min-w-max border-collapse'>
 			<thead>
 			<tr className='border-b'>
-				<th className='p-2 text-left font-medium'>Habit</th>
+				<th className='p-2 text-left typography-md-semibold'>Habit</th>
 				{visibleDays.map((day) => {
 					const isToday = inCurrentMonth && day === today.getDate()
 					return (
 						<th
 							key={day}
 							className={cn(
-								'p-2 text-center font-medium',
+								'p-2 text-center typography-md-semibold',
 								isToday ? 'bg-primary/10 text-primary' : '',
 							)}
 						>
@@ -115,7 +115,7 @@ const TrackerTable = ({ containerRef, habits, removeHabit, toggleHabitCompletion
 			{habits.map((habit) => (
 				<tr key={habit.id} className='border-b'>
 					<td className='p-2 flex items-center justify-between gap-3'>
-						<span className='truncate'>{habit.name}</span>
+						<span className='truncate typography-md-semibold'>{habit.name}</span>
 						<Button
 							type='button'
 							variant='icon'

@@ -1,3 +1,4 @@
+import Card from '@components/Card.tsx'
 import Progress from '@components/Progress.tsx'
 import { useEffect, useState } from 'react'
 import Calendar from '@components/Icons/Calendar.tsx'
@@ -37,7 +38,7 @@ const DailyProgress = () => {
 
 	return (
 		<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
-			<div className='bg-surface rounded-lg border border-border shadow-sm overflow-hidden'>
+			<Card>
 				<div className='p-4 pb-0'>
 					<h2 className='typography-lg-semibold flex items-center justify-between'>
 						Today's Progress
@@ -56,8 +57,8 @@ const DailyProgress = () => {
 						})}
 					</p>
 				</div>
-			</div>
-			<div className='bg-surface rounded-lg border border-border shadow-sm overflow-hidden'>
+			</Card>
+			<Card>
 				<div className='p-4 pb-0'>
 					<h2 className='typography-lg-semibold flex items-center justify-between'>
 						Current Streak
@@ -67,8 +68,8 @@ const DailyProgress = () => {
 					<p className='typography-lg-bold'>{habitStats.streak} days</p>
 					<p className='typography-sm-regular text-text-secondary mt-2'>Best streak: {habitStats.bestStreak} days</p>
 				</div>
-			</div>
-			<div className='bg-surface rounded-lg border border-border shadow-sm overflow-hidden'>
+			</Card>
+			<Card>
 				<div className='p-4 pb-0'>
 					<h2 className='typography-lg-semibold flex items-center justify-between'>
 						This Week
@@ -82,8 +83,8 @@ const DailyProgress = () => {
 							: `${habitStats.lastWeek - habitStats.thisWeek} from last week`}
 					</p>
 				</div>
-			</div>
-			<div className='bg-surface rounded-lg border border-border shadow-sm overflow-hidden'>
+			</Card>
+			<Card>
 				<div className='p-4 pb-0'>
 					<h2 className='typography-lg-semibold flex items-center justify-between'>
 						Completion Rate
@@ -94,7 +95,7 @@ const DailyProgress = () => {
 					<Progress percentage={progress} className='mt-2'/>
 					<p className='typography-sm-regular text-text-secondary mt-2'>Daily average</p>
 				</div>
-			</div>
+			</Card>
 		</div>
 	)
 }
