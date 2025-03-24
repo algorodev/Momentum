@@ -7,6 +7,15 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://momentum-api.onrender.com/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   test: {
     globals: true,
     environment: 'jsdom',
