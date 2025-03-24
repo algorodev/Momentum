@@ -1,4 +1,4 @@
-import ChartWrapper from '@components/__tests__/ChartWrapper.tsx'
+import ChartWrapper from '@components/ChartWrapper.tsx'
 import Tabs from '@components/Tabs.tsx'
 import { useState } from 'react'
 
