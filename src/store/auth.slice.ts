@@ -22,4 +22,5 @@ const authSlice = createSlice({
 })
 
 export const { login } = authSlice.actions
+export type AuthReducer = ReturnType<typeof authSlice.reducer>
 export default authSlice.reducer

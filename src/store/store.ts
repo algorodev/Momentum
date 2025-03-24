@@ -1,17 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
-import authReducer from './auth.slice.ts'
+import rootReducer from '@store/reducer.ts'
+import { AuthReducer } from './auth.slice.ts'
 import { loadState, saveState } from './persist.ts'
 
 const preloadedState = loadState()
 
 type Reducers = {
-	auth: ReturnType<typeof authReducer>
+	auth: AuthReducer
 }
 
 const store = configureStore<Reducers>({
-	reducer: {
-		auth: authReducer,
-	},
+	reducer: rootReducer(),
 	preloadedState,
 })
 
