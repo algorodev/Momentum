@@ -157,7 +157,7 @@ const HabitTracker = () => {
 							onValueChange={setSelectedCategory}
 						/>
 					</form>
-					<Button type='submit' variant='primary'>
+					<Button type='submit' variant='primary' onClick={addHabit}>
             <span className='h4- w-4'>
               <Plus/>
             </span>
