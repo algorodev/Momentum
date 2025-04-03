@@ -44,3 +44,19 @@ export interface RegisterError {
 export const registerRequestAction = createAction<RegisterPayload>(REGISTER_REQUEST)
 export const registerSuccessAction = createAction<RegisterResponse>(REGISTER_SUCCESS)
 export const registerFailureAction = createAction<RegisterError>(REGISTER_FAILURE)
+
+export const PROFILE_SUCCESS = 'PROFILE_SUCCESS'
+export const PROFILE_FAILURE = 'PROFILE_FAILURE'
+
+export interface ProfileResponse {
+	id: string
+	name: string
+	email: string
+}
+
+export interface ProfileError {
+	error: string
+}
+
+export const profileSuccessAction = createAction<ProfileResponse>(PROFILE_SUCCESS)
+export const profileFailureAction = createAction<ProfileError>(PROFILE_FAILURE)

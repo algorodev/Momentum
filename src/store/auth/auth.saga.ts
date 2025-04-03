@@ -1,11 +1,15 @@
 import { takeLatest, call, put } from 'redux-saga/effects'
-import { login, register } from '../../api/auth.api.ts'
+import { login, profile, register } from '../../api/auth.api.ts'
 import {
 	LOGIN_REQUEST,
+	LOGIN_SUCCESS,
 	loginFailureAction,
 	loginRequestAction,
 	LoginResponse,
 	loginSuccessAction,
+	profileFailureAction,
+	ProfileResponse,
+	profileSuccessAction,
 	REGISTER_REQUEST,
 	registerFailureAction,
 	registerRequestAction,
@@ -40,7 +44,21 @@ function* handleRegister(action: ReturnType<typeof registerRequestAction>) {
 	}
 }
 
+function* handleProfile(action: ReturnType<typeof  loginSuccessAction>) {
+	try {
+		const data: ProfileResponse = yield call(() =>
+			queryClient.fetchQuery({
+				queryKey: ['profile', action.payload],
+				queryFn: () => profile(action.payload.id, action.payload.token),
+			}))
+		yield put(profileSuccessAction(data))
+	} catch (error: any) {
+		yield put(profileFailureAction({ error: error.message }))
+	}
+}
+
 export default function* authSaga() {
 	yield takeLatest(LOGIN_REQUEST, handleLogin)
 	yield takeLatest(REGISTER_REQUEST, handleRegister)
+	yield takeLatest(LOGIN_SUCCESS, handleProfile)
 }

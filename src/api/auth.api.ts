@@ -1,4 +1,4 @@
-import { LoginResponse, RegisterResponse } from '@store/auth/auth.actions.ts'
+import { LoginResponse, ProfileResponse, RegisterResponse } from '@store/auth/auth.actions.ts'
 import { apiRequest } from './api.ts'
 
 export const login =
@@ -13,4 +13,13 @@ export const register =
 		await apiRequest('/api/auth/register', {
 			method: 'POST',
 			body: JSON.stringify(payload),
+		})
+
+export const profile =
+	async (userId: string, token: string): Promise<ProfileResponse> =>
+		await apiRequest<ProfileResponse>(`/api/auth/profile/${userId}`, {
+			method: 'GET',
+			headers: {
+				authorization: `Bearer ${token}`,
+			}
 		})
