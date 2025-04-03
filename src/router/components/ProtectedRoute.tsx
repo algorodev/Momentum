@@ -9,6 +9,7 @@ type ProtectedRouteProps = {
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
 	const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
+	console.log('ProtectedRoute isLoggedIn:', isLoggedIn)
 
 	if (!isLoggedIn) {
 		return <Navigate to='/login' replace/>

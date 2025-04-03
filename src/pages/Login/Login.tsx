@@ -1,9 +1,9 @@
 import CallToAction from '@components/CallToAction.tsx'
 import FormControl from '@components/FormControl.tsx'
-import { FormEvent, useEffect, useState } from 'react'
+import { loginRequestAction } from '@store/auth/auth.actions.ts'
+import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { login } from '@store/auth.slice.ts'
 
 const LoginPage = () => {
 	const dispatch = useDispatch()
@@ -11,13 +11,6 @@ const LoginPage = () => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
-
-	useEffect(() => {
-		const response = fetch('/api')
-			.then((res) => res.json())
-			.catch((e) => console.error(e))
-		console.log(response)
-	}, [])
 
 	const handleLogin = (e: FormEvent) => {
 		e.preventDefault()
@@ -27,10 +20,11 @@ const LoginPage = () => {
 			return
 		}
 
-		dispatch(login({ email, password }))
-		console.log('Logging in:', { email, password })
-		navigate('/habits')
-		setError('')
+		dispatch(loginRequestAction({ email, password }))
+		setTimeout(() => {
+			navigate('/habits')
+			setError('')
+		}, 1000)
 	}
 
 	return (

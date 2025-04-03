@@ -1,9 +1,14 @@
 import Button from '@components/Button.tsx'
 import CallToAction from '@components/CallToAction.tsx'
 import FormControl from '@components/FormControl.tsx'
+import { registerRequestAction } from '@store/auth/auth.actions.ts'
 import { FormEvent, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const SignUpPage = () => {
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
@@ -23,8 +28,11 @@ const SignUpPage = () => {
 			return
 		}
 
-		console.log('Signing up:', { name, email, password })
-		setError('')
+		dispatch(registerRequestAction({ name, email, password }))
+		setTimeout(() => {
+			navigate('/login')
+			setError('')
+		}, 1000)
 	}
 
 	return (

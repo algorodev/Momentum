@@ -11,8 +11,9 @@ const DashboardStats = () => {
 		improvementRate: 23,
 	}
 
+
 	return (
-		<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
+		<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-${gridCols}'>
 			<Card>
 				<div className='flex flex-row items-center justify-between p-4 pb-2'>
 					<h3 className='typography-md-semibold'>Completion Rate</h3>

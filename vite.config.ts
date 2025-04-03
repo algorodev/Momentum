@@ -9,12 +9,14 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default ({ mode }: { mode: string}) => {
 	process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
 
+	console.log('VITE_API_URL', process.env.VITE_API_URL)
+
 	return defineConfig({
 		plugins: [react(), tailwindcss(), tsconfigPaths()],
 		server: {
 			proxy: {
 				'/api': {
-					target: process.env.VITE_API_URL,
+					target: process.env.VITE_API_URL || 'http://localhost:4500',
 					changeOrigin: true,
 					rewrite: (path: string) => path.replace(/^\/api/, ''),
 				},
